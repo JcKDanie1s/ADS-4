@@ -41,8 +41,8 @@ int countPairs3(int *arr, int len, int value) {
 Sort(arr, len);
 int count = 0, temp, left, right, middle;
 for (int i = 0; i < len - 1; i++) {
-right = i, left = len;
-while (right < left - 1) {
+left = i, right = len;
+while (left < right - 1) {
 middle = (left + right) / 2;
 if (arr[i] + arr[middle] == value) {
 count++;
