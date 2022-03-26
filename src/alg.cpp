@@ -42,7 +42,7 @@ Sort(arr, len);
 int count = 0, temp, left, right, middle;
 for (int i = 0; i < len - 1; i++) {
 right = i, left = len;
-while (left < right - 1) {
+while (right < left - 1) {
 middle = (left + right) / 2;
 if (arr[i] + arr[middle] == value) {
 count++;
