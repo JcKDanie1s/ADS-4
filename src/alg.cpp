@@ -6,7 +6,7 @@ int i = 0;
 for (int j = 1; j < len; j++) {
 key = arr[j];
 i = j - 1;
-while (i >= 0 & arr[i] > key) {
+while (i >= 0 && arr[i] > key) {
 arr[i + 1] = arr[i];
 i = i - 1;
 arr[i + 1] = key;
@@ -41,17 +41,17 @@ int countPairs3(int *arr, int len, int value) {
 Sort(arr, len);
 int count = 0, temp, left, right, middle;
 for (int i = 0; i < len - 1; i++) {
-left = i, right = len;
+right = i, left = len;
 while (left < right - 1) {
 middle = (left + right) / 2;
 if (arr[i] + arr[middle] == value) {
 count++;
 temp = middle + 1;
-while (arr[i] + arr[temp] == value & temp < right) {
+while (arr[i] + arr[temp] == value && temp < right) {
 temp++; count++;
 }
 temp = middle - 1;
-while (arr[i] + arr[temp] == value & temp > left) {
+while (arr[i] + arr[temp] == value && temp > left) {
 temp--; count++;
 }
 break;
